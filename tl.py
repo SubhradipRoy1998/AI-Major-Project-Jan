@@ -18,7 +18,7 @@ if upload is not None:
   opencv_image = cv2.cvtColor(opencv_image,cv2.COLOR_BGR2RGB)
   img = Image.open(upload)
   st.image(img,caption='Uploaded Image',width=300)
-  model = load_model()
+  model = load_base_model()
   if st.sidebar.button('PREDICT'):
     st.sidebar.write("Result:")
     x = cv2.resize(opencv_image,(224,224))
