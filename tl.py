@@ -26,6 +26,7 @@ if upload is not None:
     x = preprocess_input(x)
 
     preds = model.predict(x)
+    label = decode_predictions(preds)
     print('Predicted:', decode_predictions(preds))
     # print the classification
     for i in range(3):
